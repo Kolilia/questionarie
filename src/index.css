@@ -1,0 +1,97 @@
+@tailwind base;
+
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+}
+
+@font-face {
+  font-family: "Hagrid";
+  src: local("Hagrid"), url(./fonts/shrift.otf) format("truetype");
+}
+
+@layer base {
+  h1 {
+    font-family: Hagrid, serif;
+    color: #000;
+  }
+
+  html {
+    @apply leading-base;
+
+    margin: 0px;
+    padding: 0px;
+    outline: 0;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 8px;
+    }
+  
+    &::-webkit-scrollbar-button {
+      width: 4px;
+      height: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #667085;
+      border: 0px none #fff;
+      border-radius: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: #667085;
+    }
+  
+    &::-webkit-scrollbar-thumb:active {
+      background: #667085;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: #D9D9D9;
+      border: 0px none #fff;
+      border-radius: 8;
+    }
+  
+    &::-webkit-scrollbar-track:hover {
+      background: #D9D9D9;
+    }
+  
+    &::-webkit-scrollbar-track:active {
+      background: #D9D9D9;
+    }
+  
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+
+  body {
+    height: 100%;
+    min-width: 320px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  #root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
