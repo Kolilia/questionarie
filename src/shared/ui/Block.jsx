@@ -2,7 +2,7 @@ import React from "react";
 
 const Block = ({ isLeftPicture, imageUrl, title, text, id }) => {
   return isLeftPicture ? (
-    <div className="flex flex-1 mb-14" id={id}>
+    <div className="flex flex-1 mb-80" id={id}>
       <div className="flex items-center justify-center h-[400px] flex-1">
         <img src={imageUrl} alt="" className="max-h-full" />
       </div>
@@ -10,15 +10,19 @@ const Block = ({ isLeftPicture, imageUrl, title, text, id }) => {
       <div className="flex  flex-col flex-1">
         <h2 className="text-[1.6rem]  font-bold leading-tight">{title}</h2>
 
-        <div dangerouslySetInnerHTML={{ __html: text || "" }} />
+        <div className="flex items-center h-full text-lg">
+          <span>{text}</span>
+        </div>
       </div>
     </div>
   ) : (
-    <div className="flex  flex-1 mb-14" id={id}>
+    <div className="flex  flex-1 mb-80" id={id}>
       <div className="flex flex-1 flex-col ">
         <h2 className="text-[1.6rem]  font-bold leading-tight">{title}</h2>
 
-        <div dangerouslySetInnerHTML={{ __html: text || "" }} />
+        <div className="flex items-center h-full text-lg">
+          <span>{text}</span>
+        </div>
       </div>
 
       <div className="flex flex-1 items-center justify-center h-[400px] ">
